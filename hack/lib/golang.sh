@@ -59,8 +59,8 @@ if [[ -n "${KUBE_BUILD_PLATFORMS:-}" ]]; then
   readonly KUBE_TEST_PLATFORMS=(${KUBE_BUILD_PLATFORMS})
   readonly KUBE_CLIENT_PLATFORMS=(${KUBE_BUILD_PLATFORMS})
 elif [[ "${KUBE_FASTBUILD:-}" == "true" ]]; then
-  readonly KUBE_SERVER_PLATFORMS=(linux/amd64)
-  readonly KUBE_NODE_PLATFORMS=(linux/amd64)
+  readonly KUBE_SERVER_PLATFORMS=(linux/arm64)
+  readonly KUBE_NODE_PLATFORMS=(linux/arm64)
   if [[ "${KUBE_BUILDER_OS:-}" == "darwin"* ]]; then
     readonly KUBE_TEST_PLATFORMS=(
       darwin/amd64
